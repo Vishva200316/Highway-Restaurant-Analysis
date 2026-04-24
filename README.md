@@ -3,7 +3,7 @@
 
 ---
 
-## 📌 Business Question
+##  Business Question
 
 > **Which highway around Chennai is the best opportunity to open a new restaurant  and what type of restaurant should it be?**
 
