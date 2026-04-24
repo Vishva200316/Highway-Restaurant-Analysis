@@ -1,0 +1,9 @@
+highway_id,highway_name,route,direction_type,agv_distance_km
+1,NH-16,"Chennai ↔ Kolkata (via Nellore/Vijayawada)",Inter-state,1659.00
+2,NH-48,"Chennai ↔ Bengaluru/Mumbai",Inter-state,534.00
+3,NH-716,"Chennai ↔ Tirupati/Muddanur",Inter-state,319.00
+4,NH-32,"Chennai ↔ Thoothukudi (via Chengalpattu)","Intra-state & Inter-state",657.00
+5,NH-332A,"Chennai/ECR ↔ Puducherry",Inter-state,95.00
+6,"Chennai Bypass Road","Perungalathur ↔ Puzhal (Connects NH-32/16/48/716)","Inter-urban expressway",32.00
+7,"Outer Ring Road (CORR)","Vandalur ↔ Minjur","Urban tolled ring road",60.00
+8,"East Coast Elevated Expressway","Light House ↔ East Coast Road","Intra-city express route",9.70

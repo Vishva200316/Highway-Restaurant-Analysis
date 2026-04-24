@@ -1,0 +1,20 @@
+destination_id,highway_id,destination_name,destination_type
+1,1,Nellore,Industrial
+2,1,Vijayawada,Urban
+3,1,Kolkata,Industrial
+4,2,Hosur,Industrial
+5,2,Bengaluru,Urban
+6,2,Krishnagiri,Tourist
+7,3,Tirupati,Pilgrim
+8,3,Chittoor,Urban
+9,4,Chidambaram,Pilgrim
+10,4,Thoothukudi,Industrial
+11,4,Rameswaram,Pilgrim
+12,5,Puducherry,Tourist
+13,5,Chidambaram,Tourist
+14,6,Tambaram,Urban
+15,6,Ambattur,Industrial
+16,7,Minjur,Urban
+17,7,"Red Hills",Industrial
+18,8,"ECR Beaches",Coastal
+19,8,"IT Corridor",Urban
