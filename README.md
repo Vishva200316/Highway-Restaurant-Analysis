@@ -59,11 +59,11 @@ Final Profit Score =
 
 **Final Output — Top 3 Recommendations:**
 
-| Highway | Dominant Traveller | Dominant Destination | Recommended Restaurant |
-|---|---|---|---|
-| NH-716 (Tirupati) | Family | Pilgrim | Veg Family Restaurant |
-| NH-48 (Bengaluru) | Tourist | Urban | Multi-Cuisine Restaurant |
-| NH-16 (Kolkata) | Commercial | Industrial | Budget Highway Diner |
+| Highway | Profit Score | Dominant Traveller | Dominant Destination | Recommended Restaurant |
+|---|---|---|---|---|
+| NH-32 | 4.09 | Family | Pilgrim | Veg Family Restaurant |
+| NH-332A | 3.59 | Tourist | Tourist | Non-Veg / Multi-Cuisine Restaurant |
+| NH-48 | 3.57 | Commercial | Industrial | Budget Highway Diner |
 
 ---
 
