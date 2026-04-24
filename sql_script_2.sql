@@ -50,7 +50,44 @@ from traveller_profile;
 
 select * from traveller_spending ;
 
+
+-- Dominant traveller--
+
+create temporary table dominant_traveller as
+(
+select highway_id, traveller_type,pct,
+rank() over(partition by highway_id order by pct desc)as rn
+from(
+     select highway_id,'family' as traveller_type, family_pct as pct from traveller_profile
+     union all
+     select highway_id,'tourist' , tourist_pct  from traveller_profile
+      union all
+     select highway_id,'biker' , bikers_pct  from traveller_profile
+      union all
+     select highway_id,'worker' , workers_pct  from traveller_profile
+      union all
+     select highway_id,'commercial' , commercial_pct  from traveller_profile)t
+     
+	) ;
+   
+   select * from dominant_traveller;
+
+
 -- ------
+
+-- dominant destination--
+
+create temporary table dominant_desti_cte as 
+(
+ select highway_id,destination_type,count(destination_type) as desti_count,
+ rank() over(partition by highway_id order by count(destination_type) desc) as rk
+ from destinations 
+ group by highway_id,destination_type
+ );
+ select highway_id,destination_type from dominant_desti_cte
+ where rk=1;
+
+-- profit score--
 
 create temporary table profit_score as
 select 
@@ -100,10 +137,14 @@ on h.highway_id = tt.highway_id;
 
 select * from profit_score;
 
+
+-- --
+-- least dominant restaurant types--
+
 select highway_id,
 restaurant_type,
 count(*) as type_count,
-rank() over(partition by highway_id order by count(*) desc) as r
+rank() over(partition by highway_id order by count(*) asc) as r
 from restaurants
 group by highway_id, restaurant_type;
 
@@ -113,11 +154,13 @@ from
 select highway_id,
 restaurant_type,
 count(*) as type_count,
-rank() over(partition by highway_id order by count(*) desc) as r
+rank() over(partition by highway_id order by count(*) asc) as r
 from restaurants
 group by highway_id, restaurant_type
 ) t
 where r = 1;
+
+-- top 3 recommended restaurant--
 
 select 
 p.highway_name,
@@ -164,3 +207,4 @@ select * from destinations;
 select * from toll_traffic;
 select * from traveller_profile;
 select * from profit_score;
+select * from dominant_traveller;
